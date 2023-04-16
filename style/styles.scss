@@ -15,11 +15,11 @@ $text-color: #2f8ca3;
     text-shadow: 0 0 5px $text-color,0 0 15px $text-color,0 0 30px $text-color;
 }
 
-/*
+
 body{
     @extend %text-style;
     background-color: $bg-color;
-}*/
+}
 
 .tronBox{
     @extend %text-style;

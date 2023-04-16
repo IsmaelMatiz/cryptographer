@@ -4,17 +4,16 @@
   font-weight: normal;
   font-style: normal;
 }
-.tronBox {
+.tronBox, body {
   color: #2f8ca3;
   font-family: "TronFont";
   text-shadow: 0 0 5px #2f8ca3, 0 0 15px #2f8ca3, 0 0 30px #2f8ca3;
 }
 
-/*
-body{
-    @extend %text-style;
-    background-color: $bg-color;
-}*/
+body {
+  background-color: #030504;
+}
+
 .tronBox {
   border: 2px solid #2f8ca3;
   border-radius: 30px;
