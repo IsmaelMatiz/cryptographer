@@ -1,0 +1,31 @@
+$bg-color:#030504;
+$text-color: #2f8ca3;
+
+@font-face {
+    font-family: 'TronFont';
+    src: url('Tr2n.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+ }
+
+
+%text-style{
+    color: $text-color;
+    font-family: 'TronFont';
+    text-shadow: 0 0 5px $text-color,0 0 15px $text-color,0 0 30px $text-color;
+}
+
+body{
+    @extend %text-style;
+    background-color: $bg-color;
+}
+
+.tronBox{
+    @extend %text-style;
+    border: 2px solid $text-color;
+    border-radius: 30px;
+    box-shadow: 0 0 50px $text-color, inset 0 0 20px $text-color;
+    width: 550px;
+    height: 250px;
+    background-color: $bg-color;
+}
