@@ -1,5 +1,6 @@
 $bg-color:#030504;
 $text-color: #2f8ca3;
+$link-color:#f4af2d;
 
 @font-face {
     font-family: 'TronFont';
@@ -12,14 +13,45 @@ $text-color: #2f8ca3;
 //General Code
 %text-style{
     color: $text-color;
+    font-size: large;
     font-family: 'TronFont';
     text-shadow: 0 0 5px $text-color,0 0 15px $text-color,0 0 30px $text-color;
+
+    .advise{
+        color: $link-color;
+        font-family: 'TronFont';
+        text-shadow: 0 0 5px $link-color,0 0 15px $link-color,0 0 30px $link-color;
+    }
+
+    a{
+        color: $link-color;
+        text-decoration: none;
+        font-family: 'TronFont';
+        padding: 3px;
+        text-shadow: 0 0 5px $link-color,0 0 15px $link-color,0 0 30px $link-color;
+        border-bottom: solid transparent;
+        border-top: solid transparent;
+        transition: 0.5s;
+    }
+    a:hover{
+        border-bottom: $link-color solid 2px;
+        border-top: $link-color solid 2px;
+        border-radius: 10px;
+        
+    }
+
+    button:hover{
+        color: $link-color;
+        text-shadow: 0 0 5px $link-color,0 0 15px $link-color,0 0 30px $link-color;
+    }
 }
 
 body{
     @extend %text-style;
     background-color: $bg-color;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 %tronBox{
@@ -31,13 +63,23 @@ body{
     background-color: $bg-color;
 }
 
+%tronBox-active{
+    @extend %text-style;
+    border: 2px solid $link-color;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 0 50px $link-color, inset 0 0 20px $link-color;
+    background-color: $bg-color;
+}
+
 //Main Structure
 .sort-colums{
     display: flex;
+    flex: 1;
     flex-direction: column;
     height: 100%;
     .container-2col{
-        flex: 0.8;
+        flex: 0.9;
         display: flex;
         padding: 10px;
         .child-main{
@@ -51,10 +93,9 @@ body{
     }
     
     // footer
-    footer{
-        height: 20%;
+    .bottom-part{
         text-align: center;
-        flex: 0.2;
+        flex: 0.1;
     }
 }
 
@@ -78,12 +119,26 @@ body{
 
 .input-box-tron{
     @extend %tronBox;
-    width: 50%;
-    height: 100%;
+    font-size: x-large;
+    width: 80%;
+    height: 65%;
 }
 
 .result-box-tron{
     @extend %tronBox;
     width: auto;
-    height: 80%;
+    height: 90%;
+
+    button{
+        @extend %tronBox;
+        width: 100%;
+        transition: 0.5s;
+    }
+    button:hover{
+        @extend %tronBox-active
+    }
+
+    p{
+        font-size: x-large;
+    }
 }

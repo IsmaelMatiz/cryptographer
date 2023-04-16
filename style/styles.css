@@ -4,18 +4,45 @@
   font-weight: normal;
   font-style: normal;
 }
-.result-box-tron, .input-box-tron, body {
+.result-box-tron button:hover, .result-box-tron button, .result-box-tron, .input-box-tron, body {
   color: #2f8ca3;
+  font-size: large;
   font-family: "TronFont";
   text-shadow: 0 0 5px #2f8ca3, 0 0 15px #2f8ca3, 0 0 30px #2f8ca3;
+}
+.result-box-tron button:hover .advise, .result-box-tron .advise, .input-box-tron .advise, body .advise {
+  color: #f4af2d;
+  font-family: "TronFont";
+  text-shadow: 0 0 5px #f4af2d, 0 0 15px #f4af2d, 0 0 30px #f4af2d;
+}
+.result-box-tron button:hover a, .result-box-tron a, .input-box-tron a, body a {
+  color: #f4af2d;
+  text-decoration: none;
+  font-family: "TronFont";
+  padding: 3px;
+  text-shadow: 0 0 5px #f4af2d, 0 0 15px #f4af2d, 0 0 30px #f4af2d;
+  border-bottom: solid transparent;
+  border-top: solid transparent;
+  transition: 0.5s;
+}
+.result-box-tron a:hover, .input-box-tron a:hover, body a:hover {
+  border-bottom: #f4af2d solid 2px;
+  border-top: #f4af2d solid 2px;
+  border-radius: 10px;
+}
+.result-box-tron button:hover, .input-box-tron button:hover, body button:hover {
+  color: #f4af2d;
+  text-shadow: 0 0 5px #f4af2d, 0 0 15px #f4af2d, 0 0 30px #f4af2d;
 }
 
 body {
   background-color: #030504;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.result-box-tron, .input-box-tron {
+.result-box-tron button, .result-box-tron, .input-box-tron {
   border: 2px solid #2f8ca3;
   border-radius: 30px;
   padding: 20px;
@@ -23,13 +50,22 @@ body {
   background-color: #030504;
 }
 
+.result-box-tron button:hover {
+  border: 2px solid #f4af2d;
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0 0 50px #f4af2d, inset 0 0 20px #f4af2d;
+  background-color: #030504;
+}
+
 .sort-colums {
   display: flex;
+  flex: 1;
   flex-direction: column;
   height: 100%;
 }
 .sort-colums .container-2col {
-  flex: 0.8;
+  flex: 0.9;
   display: flex;
   padding: 10px;
 }
@@ -41,10 +77,9 @@ body {
   flex: 0.3;
   padding: 5px;
 }
-.sort-colums footer {
-  height: 20%;
+.sort-colums .bottom-part {
   text-align: center;
-  flex: 0.2;
+  flex: 0.1;
 }
 
 .menu {
@@ -64,13 +99,21 @@ body {
 }
 
 .input-box-tron {
-  width: 50%;
-  height: 100%;
+  font-size: x-large;
+  width: 80%;
+  height: 65%;
 }
 
 .result-box-tron {
   width: auto;
-  height: 80%;
+  height: 90%;
+}
+.result-box-tron button {
+  width: 100%;
+  transition: 0.5s;
+}
+.result-box-tron p {
+  font-size: x-large;
 }
 
 /*# sourceMappingURL=styles.css.map */
