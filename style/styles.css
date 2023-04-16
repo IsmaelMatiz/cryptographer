@@ -4,7 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
-.tronBox, body {
+.result-box-tron, .input-box-tron, body {
   color: #2f8ca3;
   font-family: "TronFont";
   text-shadow: 0 0 5px #2f8ca3, 0 0 15px #2f8ca3, 0 0 30px #2f8ca3;
@@ -12,15 +12,65 @@
 
 body {
   background-color: #030504;
+  min-height: 100vh;
 }
 
-.tronBox {
+.result-box-tron, .input-box-tron {
   border: 2px solid #2f8ca3;
   border-radius: 30px;
+  padding: 20px;
   box-shadow: 0 0 50px #2f8ca3, inset 0 0 20px #2f8ca3;
-  width: 550px;
-  height: 250px;
   background-color: #030504;
+}
+
+.sort-colums {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.sort-colums .container-2col {
+  flex: 0.8;
+  display: flex;
+  padding: 10px;
+}
+.sort-colums .container-2col .child-main {
+  flex: 0.7;
+  padding: 5px;
+}
+.sort-colums .container-2col .child-sec {
+  flex: 0.3;
+  padding: 5px;
+}
+.sort-colums footer {
+  height: 20%;
+  text-align: center;
+  flex: 0.2;
+}
+
+.menu {
+  display: flex;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.menu img {
+  width: 40%;
+  height: 100%;
+  flex: 0.05;
+}
+.menu h1 {
+  width: fit-content;
+  flex: 0.95;
+  padding-left: 10px;
+}
+
+.input-box-tron {
+  width: 50%;
+  height: 100%;
+}
+
+.result-box-tron {
+  width: auto;
+  height: 80%;
 }
 
 /*# sourceMappingURL=styles.css.map */

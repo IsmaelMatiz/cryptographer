@@ -9,24 +9,81 @@ $text-color: #2f8ca3;
  }
 
 
+//General Code
 %text-style{
     color: $text-color;
     font-family: 'TronFont';
     text-shadow: 0 0 5px $text-color,0 0 15px $text-color,0 0 30px $text-color;
 }
 
-
 body{
     @extend %text-style;
     background-color: $bg-color;
+    min-height: 100vh;
 }
 
-.tronBox{
+%tronBox{
     @extend %text-style;
     border: 2px solid $text-color;
     border-radius: 30px;
+    padding: 20px;
     box-shadow: 0 0 50px $text-color, inset 0 0 20px $text-color;
-    width: 550px;
-    height: 250px;
     background-color: $bg-color;
+}
+
+//Main Structure
+.sort-colums{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .container-2col{
+        flex: 0.8;
+        display: flex;
+        padding: 10px;
+        .child-main{
+            flex: 0.7;
+            padding: 5px;
+        }
+        .child-sec{
+            flex: 0.3;
+            padding: 5px;
+        }
+    }
+    
+    // footer
+    footer{
+        height: 20%;
+        text-align: center;
+        flex: 0.2;
+    }
+}
+
+//Childs main structure
+.menu{
+    display: flex;
+    height: 50px;
+    margin-bottom: 20px;
+    img{
+        width: 40%;
+        height: 100%;
+        flex: 0.05;
+    }
+    h1{
+        width: fit-content;
+        flex: 0.95;
+        padding-left: 10px;
+    }
+}
+
+
+.input-box-tron{
+    @extend %tronBox;
+    width: 50%;
+    height: 100%;
+}
+
+.result-box-tron{
+    @extend %tronBox;
+    width: auto;
+    height: 80%;
 }
