@@ -14,10 +14,10 @@
                     <img src="./images/Vector.png" alt="Alura Logo" />
                     <h1>Cryptographer</h1>
                 </div>
-                <textarea  class="input-box-tron" placeholder="Ingrese el texto aqui" id="textField"></textarea>
+                <textarea class="input-box-tron" placeholder="Ingrese el texto aqui" id="textField"></textarea>
                 <div class="selection-box">
                     <label>Modo</label>
-                    <Select>
+                    <Select id="userChoose">
                         <option value="Encrypt">Encriptar</option>
                         <option value="Decrypt">Desencriptar</option>
                     </Select>
@@ -33,6 +33,7 @@
                         </div>
                         <div class="bottom-part">
                             <button>Copiar</button>
+                            <button onclick="deleteResult()">Borrar</button>
                         </div>
                     </div>
                 </div>

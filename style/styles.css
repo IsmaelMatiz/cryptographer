@@ -111,7 +111,7 @@ select:hover, .result-box-tron button:hover {
   height: 90%;
 }
 .result-box-tron button {
-  width: 100%;
+  width: 45%;
   transition: 0.5s;
 }
 .result-box-tron p {
