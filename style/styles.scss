@@ -121,8 +121,9 @@ body{
 .input-box-tron{
     @extend %tronBox;
     font-size: x-large;
-    width: 80%;
-    height: 65%;
+    width: 90%;
+    height: 45%;
+    margin-left: 15px;
 }
 
 .result-box-tron{
@@ -139,8 +140,28 @@ body{
         @extend %tronBox-active
     }
 
-    p{
-        
+}
+
+select{
+        @extend %tronBox;
+        width: 100%;
+        transition: 0.5s;
+}
+
+select:hover{
+    @extend %tronBox-active
+}
+
+.selection-box{
+    display: block;
+    padding: 15px;
+
+    p, label{
+        padding-left: 15px;
+    }
+
+    label{
+        font-size: x-large;
     }
 }
 
@@ -153,6 +174,19 @@ body{
 
     .result-box-tron{
         width: 80%;
+    }
+
+    .input-box-tron{
+        width: 80%;
+        margin-left: 0px;
+    }
+
+    .selection-box{
+        padding: 0px;
+    }
+
+    select{
+        width: 90%;
     }
 
     .menu{

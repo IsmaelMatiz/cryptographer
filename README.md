@@ -14,8 +14,9 @@ an option to decrypt the text.
 
 ### How to use it?
 Now, you would be thinking about how to use it, well it's as easy to just
+choose which mode you want to use(encrypt or decrypt)
 enter the text on the text field that says "Ingrese el texto aquí"
-and then will see the result in real-time.
+and then will see the result at the right side in real-time.
 
 ### How does the encrypted work?
 Well here is a quote from the original challenge

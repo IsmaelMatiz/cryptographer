@@ -15,20 +15,21 @@
                     <h1>Cryptographer</h1>
                 </div>
                 <textarea  class="input-box-tron" placeholder="Ingrese el texto aqui" id="textField"></textarea>
-                <p class="advise">No se permiten mayusculas o caracteres especiales</p>
+                <div class="selection-box">
+                    <label>Modo</label>
+                    <Select>
+                        <option value="Encrypt">Encriptar</option>
+                        <option value="Decrypt">Desencriptar</option>
+                    </Select>
+                    <p class="advise">No se permiten mayusculas o caracteres especiales</p>
+                </div>
             </div>
     
             <div class="child-sec">
                 <div class="result-box-tron">
                     <div class="sort-colums">
                         <div class="container-2col">
-                            <p>Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Perferendis provident 
-                                ipsa a deserunt aut iste quidem asperiores 
-                                consectetur dolorum, ducimus quasi aperiam 
-                                molestiae at nemo neque nostrum totam quos 
-                                itaque?
-                            </p>
+                            <p id="resultEncrypt"></p>
                         </div>
                         <div class="bottom-part">
                             <button>Copiar</button>

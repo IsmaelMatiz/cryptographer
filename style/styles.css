@@ -4,18 +4,18 @@
   font-weight: normal;
   font-style: normal;
 }
-.result-box-tron button:hover, .result-box-tron button, .result-box-tron, .input-box-tron, body {
+select:hover, .result-box-tron button:hover, select, .result-box-tron button, .result-box-tron, .input-box-tron, body {
   color: #2f8ca3;
   font-size: large;
   font-family: "TronFont";
   text-shadow: 0 0 5px #2f8ca3, 0 0 15px #2f8ca3, 0 0 30px #2f8ca3;
 }
-.result-box-tron button:hover .advise, .result-box-tron .advise, .input-box-tron .advise, body .advise {
+.result-box-tron button:hover .advise, select .advise, .result-box-tron .advise, .input-box-tron .advise, body .advise {
   color: #f4af2d;
   font-family: "TronFont";
   text-shadow: 0 0 5px #f4af2d, 0 0 15px #f4af2d, 0 0 30px #f4af2d;
 }
-.result-box-tron button:hover a, .result-box-tron a, .input-box-tron a, body a {
+select:hover a, .result-box-tron button:hover a, select a, .result-box-tron a, .input-box-tron a, body a {
   color: #f4af2d;
   text-decoration: none;
   font-family: "TronFont";
@@ -25,12 +25,12 @@
   border-top: solid transparent;
   transition: 0.5s;
 }
-.result-box-tron a:hover, .input-box-tron a:hover, body a:hover {
+select a:hover, .result-box-tron a:hover, .input-box-tron a:hover, body a:hover {
   border-bottom: #f4af2d solid 2px;
   border-top: #f4af2d solid 2px;
   border-radius: 10px;
 }
-.result-box-tron button:hover, .input-box-tron button:hover, body button:hover {
+select button:hover, .result-box-tron button:hover, .input-box-tron button:hover, body button:hover {
   color: #f4af2d;
   text-shadow: 0 0 5px #f4af2d, 0 0 15px #f4af2d, 0 0 30px #f4af2d;
 }
@@ -42,7 +42,7 @@ body {
   flex-direction: column;
 }
 
-.result-box-tron button, .result-box-tron, .input-box-tron {
+select, .result-box-tron button, .result-box-tron, .input-box-tron {
   border: 2px solid #2f8ca3;
   border-radius: 30px;
   padding: 20px;
@@ -50,7 +50,7 @@ body {
   background-color: #030504;
 }
 
-.result-box-tron button:hover {
+select:hover, .result-box-tron button:hover {
   border: 2px solid #f4af2d;
   border-radius: 30px;
   padding: 20px;
@@ -101,8 +101,9 @@ body {
 
 .input-box-tron {
   font-size: x-large;
-  width: 80%;
-  height: 65%;
+  width: 90%;
+  height: 45%;
+  margin-left: 15px;
 }
 
 .result-box-tron {
@@ -113,6 +114,22 @@ body {
   width: 100%;
   transition: 0.5s;
 }
+select {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.selection-box {
+  display: block;
+  padding: 15px;
+}
+.selection-box p, .selection-box label {
+  padding-left: 15px;
+}
+.selection-box label {
+  font-size: x-large;
+}
+
 @media only screen and (max-width: 768px) {
   .container-2col {
     width: 100%;
@@ -120,6 +137,16 @@ body {
   }
   .result-box-tron {
     width: 80%;
+  }
+  .input-box-tron {
+    width: 80%;
+    margin-left: 0px;
+  }
+  .selection-box {
+    padding: 0px;
+  }
+  select {
+    width: 90%;
   }
   .menu h1 {
     margin-top: 22px;
