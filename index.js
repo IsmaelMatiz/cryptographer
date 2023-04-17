@@ -9,7 +9,7 @@ mainInput.onkeyup = () => {
     if(isUpperCaseOrSpecialCharacter(mainInput.value)){
         alert("no se permiten mayusculas")
     } else{
-        result.innerHTML = mainInput.value
+        result.innerText = mainInput.value
     }
 }
 

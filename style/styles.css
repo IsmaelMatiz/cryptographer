@@ -114,6 +114,11 @@ select:hover, .result-box-tron button:hover {
   width: 100%;
   transition: 0.5s;
 }
+.result-box-tron p {
+  width: 100%;
+  word-break: break-word;
+}
+
 select {
   width: 100%;
   transition: 0.5s;
