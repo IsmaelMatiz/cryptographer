@@ -12,33 +12,38 @@ const encryptKey ={
     "o" : "ober",
     "u" : "ufat"
 }
+//Selectores de las partes mas importantes del sitio
 const mainInput = document.getElementById("textField")
 const result = document.getElementById("resultEncrypt");
 const encryptOrDecrypt = document.getElementById("userChoose");
 var lastCharacter = "";
 var vocalYes = false
 
+//hace q el cursos se posicione automaticamente en el input
 window.onload = () =>{mainInput.focus()}
 
+//la primera regex que hago para validar texto
 const isUpperCaseOrSpecialCharacter = (string) => /([A-Z])|([\\\/\(\)\{\}\[\]\!\"\#\$\%\&\=\?\¡\ñ\Ñ])/.test(string)
 
-mainInput.oninput = transcrypt
+mainInput.oninput = transcrypt//esto llama al transcrrypt el lla al inEncrupter y encripta o decripta cada q se escribe algo
 
 
 mainInput.onpaste = (event)=>{
     const inputText = event.clipboardData.getData('text');
-    
+    //para asegurar un buen resultado primero borro lo que haya y ahi si lo pego
+    //el time out es pq a veces no se copiaba bien el texto en el input asi q le doy 10 milisegundos para q se obtenga bien la info
     setTimeout(() => {
         deleteResult()
         pastEncrypter(inputText);
 }, 10)}
 
-
-function transcrypt(){
-    
+//Debido algunos problemas preferi no llamar la funcion inEcrypt directamente y mejor lo hago a traves de esta otra funcion
+//innecesario tal vez pero funciona
+function transcrypt(){    
     inEncrypter(mainInput.value)
 }
 
+//Esta funcion encripta o desencripta texto cuando se escribe en el input
 function inEncrypter(inputText){
     if(isUpperCaseOrSpecialCharacter( inputText)){//Verificar mayusculas o caracteres especiales
         alert("no se permiten mayusculas o caracteres especiales")
@@ -68,7 +73,7 @@ function inEncrypter(inputText){
     }
 }
 
-
+//Esta funcion encripta o desencripta texto cuando se pega en el input
 function pastEncrypter(inputText){
     if(isUpperCaseOrSpecialCharacter( inputText)){//Verificar mayusculas o caracteres especiales
         alert("no se permiten mayusculas o caracteres especiales")
@@ -96,25 +101,28 @@ function pastEncrypter(inputText){
                 if(eachLetter === " ")result.innerText += '‍‍‍‍‍ㅤ'//agregar espacios             
             }
 
-            //TODO: arreglar problema con la o
             let replaceResult = result.innerText + ""
             console.log("antes del for: "+replaceResult)
-            for (const vocal in encryptKey) {
+            for (let vocal in encryptKey) {
                 console.log(encryptKey[vocal]+" vs "+vocal)
-                replaceResult = replaceResult.replace(encryptKey[vocal],vocal)    
+                replaceResult = replaceResult.replaceAll(encryptKey[vocal],vocal)    
             }
-            
-            result.innerText = replaceResult
+            replaceResult = replaceResult.replaceAll(encryptKey["o"],"o")
             console.log("pero q ha pasao: "+replaceResult)
+            result.innerText = replaceResult
+            
         }
     }
 
 }
 
-
-
+//Esta funcion limpia el area de resultado
 function deleteResult(){
     result.innerText = ""
 }
 
-//TODO: hacer funcion para copiar el texto
+//Esta funcion guarda el texto en el clipboard
+function copyText() {
+    alert("Texto copiado")
+    navigator.clipboard.writeText(result.innerText);
+}
